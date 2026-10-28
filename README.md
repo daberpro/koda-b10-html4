@@ -1,6 +1,7 @@
 # HTML table layouting
-in this repo i learn how to create a layout using html table
-i need to manipulate colspan and rowspan
+i have refactor this repo with branch refactor/flexbox
+which is the same implementation for layuting on table
+but now i change it into all flexbox
 and for the result check image below
 
 ![result](image.png)
