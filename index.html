@@ -3,7 +3,102 @@
 
 <head>
     <title>HTML table layout</title>
-    
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container > div:nth-child(1) > span {
+            color: green;
+        }
+
+        .container > div:nth-child(2) > span {
+            color: blue;
+        }
+
+        .container > div:nth-child(4) > span {
+            color: red;
+        }
+
+        .container > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > span {
+            color: purple;
+        }
+
+
+        .container > div:nth-child(3) > div:nth-child(1) > div:nth-child(2) > span {
+            color: skyblue;
+        }
+
+        .container > div:nth-child(3) > div:nth-child(2) > span {
+            color: lightgreen;
+        }
+
+        .container > div:nth-child(1),
+        .container > div:nth-child(2),
+        .container > div:nth-child(4){
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            border-bottom: 1px solid black;
+        }
+
+        .container > div:nth-child(3){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            height: 400px;
+            width: 100%;
+        }
+
+        .container > div:nth-child(3) > div{
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 50%;
+            border-bottom: 1px solid black;
+        }
+
+        .container > div:nth-child(3) > div:nth-child(1) > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 200px;
+            width: 100%;
+            border-bottom: 1px solid black;
+            
+        }
+
+        .container > div:nth-child(3) > div:nth-child(1) > div:last-child{
+            border: none;
+        }
+
+        .container > div:nth-child(3) > div:nth-child(2){
+            border-left: 1px solid black;
+        }
+
+        .container > div > span, .container > div:nth-child(3) > div {
+            font-size: 4rem;
+        }
+    </style>
 </head>
 
 <body>
