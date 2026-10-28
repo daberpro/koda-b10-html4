@@ -3,6 +3,98 @@
 
 <head>
     <title>HTML table layout</title>
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+
+         *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+         }
+
+        .container {
+            width: 100%;
+            height: fit-content;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 200px 200px 400px 200px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container > div:nth-child(1) > span{
+            color: green;
+        }
+
+        .container > div:nth-child(2) > span{
+            color: blue;
+        }
+
+        .container > div:nth-child(3) > div:first-child > div:first-child > span{
+            color: purple;
+        }
+
+        .container > div:nth-child(3) > div:first-child > div:last-child > span{
+            color: lightblue;
+        }
+
+        .container > div:nth-child(3) > div:last-child > span{
+            color: lightgreen;
+        }
+
+        .container > div:nth-child(4) > span{
+            color: red;
+        }
+
+        .container > div{
+            width: 100%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+            border-bottom: 1px solid black;
+        }
+
+        .container > div:nth-child(3){
+            grid-template-columns: 50% 50%;
+        }
+
+        .container > div:nth-child(3) > div:first-child{
+            display: grid;
+            grid-template-rows: 200px 200px;
+            grid-template-columns: 100%;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .container > div:nth-child(3) > div:first-child > div{
+            display: grid;
+            height: 100%;
+            place-items: center;
+        }
+
+        .container > div:nth-child(3) > div:first-child > div:first-child{
+            border-bottom: 1px solid black;
+        }
+
+        .container > div:nth-child(3) > div:last-child{
+            display: grid;
+            place-items: center;
+            width: 100%;
+            height: 100%;
+            border-left: 1px solid black;
+        }
+
+        .container span{
+            font-size: 3rem;
+        }
+
+
+
+    </style>
 </head>
 
 <body>
